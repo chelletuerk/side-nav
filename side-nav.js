@@ -5,9 +5,11 @@ class SideNav {
     this.showButtonEl = document.querySelector('.js-menu-show')
     this.hideButtonEl = document.querySelector('.js-menu-hide')
     this.sideNavEl = document.querySelector('.js-side-nav')
+    this.sideNavContainerEl = document.querySelector('.js-side-nav-container')
 
     this.showSideNav = this.showSideNav.bind(this)
     this.hideSideNav = this.hideSideNav.bind(this)
+    this.blockClicks = this.blockClicks.bind(this)
 
     this.addEventListeners()
   }
@@ -15,6 +17,12 @@ class SideNav {
   addEventListeners() {
     this.showButtonEl.addEventListener('click', this.showSideNav)
     this.hideButtonEl.addEventListener('click', this.hideSideNav)
+    this.sideNavEl.addEventListener('click', this.hideSideNav)
+    this.sideNavContainerEl.addEventListener('click', this.blockClicks)
+  }
+
+  blockClicks(e) {
+    e.stopPropagation()
   }
 
   showSideNav() {
