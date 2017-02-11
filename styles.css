@@ -83,3 +83,44 @@ html, body {
 .side-nav--visible .side-nav__container {
   transform: none;
 }
+
+.side-nav__hide {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  background: none;
+  border: none;
+  color: #FFF;
+}
+
+.side-nav__header {
+  height: 200px;
+  background: #330099;
+  color: #FFF;
+  display: flex;
+  padding: 16px;
+  align-items: flex-end;
+  font-size: 24px;
+}
+
+.side-nav__content {
+  padding-top: 32px;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.side-nav__content li {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 16px;
+}
+
+.side-nav__content li:hover {
+  background: #CCC;
+  cursor: pointer;
+}
